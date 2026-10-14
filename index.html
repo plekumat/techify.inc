@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>İlk Web Sitem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techify | Support & About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Modern ve temiz bir görünüm sağlayan font */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        /* Techify Kurumsal Rengi: Modern Mavi */
+        :root {
+            --brand-color: #2563eb; /* Tailwind blue-600 */
+            --brand-hover: #1d4ed8; /* Tailwind blue-700 */
+        }
+
+        .brand-color {
+            color: var(--brand-color);
+        }
+        .bg-brand {
+            background-color: var(--brand-color);
+        }
+        .bg-brand-hover:hover {
+            background-color: var(--brand-hover);
+        }
+    </style>
 </head>
-<body>
-    <h1>Merhaba Dünya!</h1>
-    <p>Bu benim GitHub Pages ile yaptığım ilk web sitem.</p>
+<body class="antialiased min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+    <!-- Top Header -->
+    <header class="bg-brand py-5 px-8 flex justify-between items-center shadow-md sticky top-0 z-50">
+        <!-- Logo -->
+        <div class="text-4xl font-black text-white tracking-tighter capitalize">Techify</div>
+        <nav class="hidden sm:flex space-x-8 text-white font-bold text-lg">
+            <a href="#about" class="hover:text-blue-200 transition">About Us</a>
+            <a href="#support" class="hover:text-blue-200 transition">Support</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- About Us Section -->
+        <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
+            
+            <h2 class="text-4xl font-extrabold brand-color mb-6 tracking-wide">About Us</h2>
+            
+            <p class="text-[19px] text-slate-800 mb-4 font-semibold leading-relaxed max-w-3xl mx-auto">
+                Based in Istanbul, Techify is dedicated to shaping the future of digital experiences by creating innovative software solutions used by thousands worldwide.
+            </p>
+            
+            <p class="text-[19px] text-slate-800 font-semibold leading-relaxed mb-10 max-w-3xl mx-auto">
+                At Techify, we believe in passionate people who embody personal growth and take full ownership of their responsibilities. Our team collaboratively builds an environment where every member contributes to our shared success.
+            </p>
+
+            <!-- Divider -->
+            <div class="border-b-4 border-blue-600 w-24 mx-auto mb-10 rounded-full opacity-80"></div>
+
+            <!-- Support / Contact Section -->
+            <div id="support" class="bg-white rounded-[2.5rem] p-10 shadow-xl border border-gray-100 max-w-2xl mx-auto transition-transform hover:-translate-y-2 duration-300">
+                <h2 class="text-3xl font-extrabold text-slate-800 mb-3">Need Help?</h2>
+                <p class="text-slate-500 mb-6 font-bold text-lg">
+                    Experiencing an issue with our products or want to discuss a partnership?
+                </p>
+                <a href="mailto:contact@techify.inc" class="inline-block bg-brand bg-brand-hover text-white font-extrabold py-4 px-12 rounded-full transition-all duration-200 shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] text-lg">
+                    Contact Support Team
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand text-white py-10 text-center">
+        <!-- Footer Logo -->
+        <div class="text-5xl font-black capitalize mb-8 tracking-tighter">Techify</div>
+        
+        <!-- Copyright -->
+        <p class="text-sm font-semibold opacity-90">
+            All rights reserved. &copy; 2026 - Techify.inc
+        </p>
+    </footer>
+
 </body>
 </html>
